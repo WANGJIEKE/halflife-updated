@@ -143,9 +143,9 @@ void CGib :: SpawnHeadGib( entvars_t *pevVictim )
 		
 		edict_t		*pentPlayer = FIND_CLIENT_IN_PVS( pGib->edict() );
 		
-		if ( RANDOM_LONG ( 0, 100 ) <= 5 && pentPlayer )
+		if ( pentPlayer )
 		{
-			// 5% chance head will be thrown at player's face.
+			// head will always be thrown at player's face.
 			entvars_t	*pevPlayer;
 
 			pevPlayer = VARS( pentPlayer );
